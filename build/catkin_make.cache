@@ -1,2 +1,0 @@
-slammer:slammer_auto:slammer_sim
--DCATKIN_DEVEL_PREFIX=/home/nichole/slammer/devel -DCMAKE_INSTALL_PREFIX=/home/nichole/slammer/install -G Unix Makefiles
