@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find slammer)/urdf/slammer.xacro'"/>
+
+  <node name="rviz" pkg="rviz" type="rviz"/>
+
+  <param name="rate" type="int" value="10" />
+  <param name="wheel_separation" value="0.203"/>
+  <param name="radius" value="0.05"/>
+
+  <node pkg="slammer" type="velocity_publisher.py" name="velocity_publisher" output="screen" ns="/slammer"/>
+  <node pkg="slammer" type="odometry_publisher.py" name="odometry_publisher" output="screen" ns="/slammer"/>
+  <node pkg="slammer" type="transform_publisher.py" name="transform_publisher" output="screen" ns="/slammer"/>
+  <node pkg="slammer" type="imu_publisher.py" name="imu_publisher" output="screen" ns="/slammer"/>
+
+
+</launch>
+

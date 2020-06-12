@@ -1,0 +1,17 @@
+slammer:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 10
+
+  leftWheel_vel_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: left_wheel_joint
+    pid: {p: 100000.0, i: 0.8, d: 150.0, iMax: 0.0, iMin: 0.0, cmdMax: 0.0, cmdMin: 0.0}
+
+
+  rightWheel_vel_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: right_wheel_joint
+    pid: {p: 100000.0, i: 0.8, d: 150.0, iMax: 0.0, iMin: 0.0, cmdMax: 0.0, cmdMin: 0.0}
+
+

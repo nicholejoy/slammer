@@ -1,0 +1,10 @@
+footprint: [[-0.06, -0.194], [-0.06, 0.194], [0.06, 0.194], [0.06, -0.194]]
+track_unknown_space: true
+update_frequency: 0.5 #5.0
+publish_frequency: 0.5 #5.0
+transform_tolerance: 5.0
+
+
+
+
+

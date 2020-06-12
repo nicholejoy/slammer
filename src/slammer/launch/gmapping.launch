@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+  <arg name="scan_topic" default="/slammer/laser/scan"/>
+  <arg name="base_frame" default="/chassis"/>
+  <arg name="odom_frame" default="/odom"/>
+
+  <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
+    <remap from="scan" to = "$(arg scan_topic)"/>
+    <param name="base_frame" value="$(arg base_frame)"/>
+    <param name="odom_frame" value="$(arg odom_frame)"/>
+    <param name="throttle_scans" value="1"/>
+    <param name="map_update_interval" value="0.1"/>
+    <param name="maxUrange" value="18"/>
+    <param name="iterations" value="5"/>
+    <param name="ogain" value="3"/>
+    <param name="minimumScore" value="0"/>
+
+    <param name="srr" value="0.1"/>
+    <param name="srt" value="0.2"/>
+    <param name="str" value="0.1"/>
+    <param name="stt" value="0.2"/> #try with 1
+    <param name="linearUpdate" value="1.0"/>
+    <param name="angularUpdate" value="0.5"/>
+    <param name="resampleThreshold" value="0.5"/>
+    <param name="particles" value="60"/>
+    <param name="delta" value="0.05"/>
+    <param name="transform_publish_period" value="0.05"/>
+    <param name="occ_thresh" value="0.25"/>
+    <param name="xmin" value="-40" />
+    <param name="xmax" value="40" />
+    <param name="ymin" value="-40" />
+    <param name="ymax" value="40" />
+  </node> 
+
+</launch>

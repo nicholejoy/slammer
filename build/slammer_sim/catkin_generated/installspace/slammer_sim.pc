@@ -1,0 +1,8 @@
+prefix=/home/nichole/slammer/install
+
+Name: slammer_sim
+Description: Description of slammer_sim
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

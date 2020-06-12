@@ -1,0 +1,17 @@
+global_costmap:
+  global_frame: map
+  robot_base_frame: chassis
+  static_map: true
+
+  rolling_window: false
+  width: 40.0
+  height: 40.0
+  resolution: 0.1
+
+  obstacle_layer:
+    enabled: false
+
+  inflation_layer:
+    enabled:              true
+    cost_scaling_factor:  10.0
+    inflation_radius:     0.3
